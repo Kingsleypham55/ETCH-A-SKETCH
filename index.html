@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+    <div class="flex-container">
+      <div class="title"><h1>Etch-a-Sketch</h1></div>
+       
+      <div class="content">
+         <div class="buttons">
+           <div class="mode">Mode: Coloring</div>
+          <button class="blackButton" style="background-color:#001219" onclick = "changeColor('black')">Black</button>
+           <button class="grayButton" style="background-color:#2b2d42" onclick = "changeColor('gray')">Gray</button>
+           <button class="rainbowButton" style="background-color: #ae2012;"  onclick = "changeColor('random')">Random</button>
+           <button class="eraserButton" style="background-color:#ca6702" onclick = "changeColor('white')">Eraser</button>
+           <button id="resetButton" style="background-color:#4e9af1" onclick = "resetBoard()">Reset</button>
+          <input
+             type="range"
+             min="2"
+             max="100"
+             step="1"
+             placeholder="Size of Board"
+             value="0"
+             onchange="changeSize(this.value)"
+           />
+           <button class="sizeValue" style="background-color:#f64c72">16 X 16</button>
+         <div class="error">
+             Choose Between 2 and 100
+         </div>
+          </div>
+         
+         
+           <div>
+          
+          </div>
+         <div class="board"></div>
+         
+       </div>
+     </div>
+   </body>
+   <script src="script.js"></script>
+</html>
